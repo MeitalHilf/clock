@@ -15,6 +15,9 @@ app.use(express.static(path.join(__dirname, "css")));
 var db_M = require('./database');
 global.db_pool = db_M.pool;
 
+const tasks_rtr = require('./');
+app.use('./',);
+
 
 app.listen(port, () => {
     console.log(`Now listening on port http://localhost:${port}`);
