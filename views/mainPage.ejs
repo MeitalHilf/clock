@@ -1,5 +1,29 @@
+<%- include("top.ejs") %>
 <main>
+    <body>
     <link href="/css/style.css" rel="stylesheet" type="text/css">
 
-    <script src=""></script>
+    <form action="/Clock/Add" method="post">
+        <input type="text" name="name1"   id="first_name" placeholder= "Enter first name"/> <br><br>
+        <input type="text" name="name2"   id="last_name"   placeholder="Enter last name"/> <br><br>
+        <button>send</button>
+    </form>
+    </body>
+    <script>
+        async function AddLine(){
+            let name=document.getElementById("first_name").value;
+            let lastName=document.getElementById("last_name").value;
+            let response = await fetch('/Clock/Add', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({first_name: name, last_name: lastName})
+                }
+            );
+            let jsn=await response.json();
+            console.log(jsn);
+        }
+    </script>
+    <script src="/routes/EmployeesR.js"></script>
 </main>
