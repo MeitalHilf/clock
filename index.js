@@ -21,6 +21,9 @@ global.db_pool = db_M.pool;
 const employees_rtr = require('./routes/EmployeesR');
 app.use('/employees', employees_rtr);
 
+const employeesTime_rtr = require('./routes/EmployeesTimeR');
+app.use('/employees-time', employeesTime_rtr);
+
 
 app.listen(port, () => {            //server starts listening for any attempts from a client to connect at port: {port}
     console.log(`Now listening on port http://localhost:${port}`);
