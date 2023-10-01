@@ -7,3 +7,4 @@ router.get("/",(req, res) => {
     res.render("HomePage", {pageTitle:"בוקר טוב"});
 
 });
+
