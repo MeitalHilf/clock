@@ -1,25 +1,24 @@
 <%- include("TopPage.ejs") %>
 <main>
-    <h1 id="employees">
-        Employees
-    </h1>
+<h1 id="Employees">Employees</h1>
 
-    <div id="AddForm">
-        <input type="text" name="name"  id="name"  placeholder="name"/>
-        <button id="Add" onclick="addNewLine();">Add</button>
+<div id="AddForm">
+    <input type="text" name="name" id="name" placeholder="name"/>
+    <button id="Add" onclick="NewLine();">Add</button>
+</div>
 
-    </div>
-    <table id="table">
-        <thead>
-        <tr>
-            <th>Edit</th>
-            <th>ENTER</th>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Delete</th>
-            <th></th>
-        </tr>
-        </thead>
-        <tbody id="mainEmployees">  </tbody>
-    </table>
+<table id="table">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Edit</th>
+        <th>ENTER</th>
+        <th>Delete</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody id="oneEmployees"></tbody>
+</table>
+<script src="/js/Employees.js"></script>
 </main>
