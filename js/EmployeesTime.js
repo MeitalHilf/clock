@@ -75,6 +75,28 @@ async function editLine(id) {
     listtwo();
     getList();
 
+window.addEventListener("load", load);
+async function load() {
+    let selectElement = document.getElementById("choice");
+
+    try {
+        let response = await fetch('/employees/List');
+        let data = await response.json();
+
+        // צור את האפשרויות ב-<select> על פי השמות
+        for (let employee of data) {
+            let option = document.createElement("option");
+            option.value = employee.name;
+            option.text = employee.name;
+            selectElement.appendChild(option);
+        }
+    } catch (error) {
+        console.error("Error", error);
+    }
+}
+
+
+
 
 
 
