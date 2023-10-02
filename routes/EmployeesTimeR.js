@@ -2,9 +2,10 @@ const express = require('express');
 const router = express.Router()
 module.exports = router;
 
-// router.get("/", function (req,res){
-//     res.render("EmploPage",{});
-// })
+router.get("/",function (req,res){
+    res.render("EmployeesTime",{});
+})
+
 router.post("/Add", function(req,res){
     //קליטת הנתונים
     let {name} =req.body;
